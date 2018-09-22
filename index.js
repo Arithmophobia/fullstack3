@@ -1,8 +1,24 @@
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
 const bodyParser = require('body-parser')
 
+morgan.token('data', function getData (req) {
+  return req.data
+})
+
+function assignData(req, res, next) {
+  req.data = JSON.stringify(req.body)
+  next()
+}
+// first convert to json!
 app.use(bodyParser.json())
+// then save data in string
+app.use(assignData)
+// finally log data
+app.use(morgan(':method :url :data :status :res[content-length] - :response-time ms'))
+//app.use(morgan('tiny'))
+
 
 let persons = [
   {
