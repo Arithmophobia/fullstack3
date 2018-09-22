@@ -2,6 +2,9 @@ const express = require('express')
 const morgan = require('morgan')
 const app = express()
 const bodyParser = require('body-parser')
+const cors = require('cors')
+
+app.use(cors())
 
 morgan.token('data', function getData (req) {
   return req.data
