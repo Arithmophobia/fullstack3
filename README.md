@@ -1,3 +1,4 @@
 # fullstack3
-link to heroku app:
-https://secure-atoll-75420.herokuapp.com/api/persons
+This is a repository for Helsinki University Full Stack Open course part 3.
+You can test this app at Heroku:
+https://secure-atoll-75420.herokuapp.com/
