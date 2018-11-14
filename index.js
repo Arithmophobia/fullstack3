@@ -3,7 +3,6 @@ const morgan = require('morgan')
 const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const mongoose = require('mongoose')
 const Person = require('./models/person')
 
 app.use(cors())
