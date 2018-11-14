@@ -1,0 +1,7 @@
+PUT  http://localhost:3001/api/persons/5be9b592fa8633298c9d3d89
+content-Type: application/json
+
+{
+    "name": "joku muu",
+    "number": "00000000"
+}
